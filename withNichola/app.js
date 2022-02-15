@@ -1,20 +1,43 @@
-const title = document.querySelector("div.hello:first-child h1");
 
-console.log(window.innerWidth);
-title.textContent = "Hello!"
-if(window.innerWidth === 500) document.body.style.backgroundColor = "cadetblue";
-else if (window.innerWidth >500 && window.innerWidth <=1000 ) document.body.style.backgroundColor = "darkmagenta";
-else  document.body.style.backgroundColor = "gold";
+const range = document.querySelector("#range");
+const guess = document.querySelector("#guess");
+const play = document.querySelector("#play");
+const blank = document.querySelector("#blank");
+const result = document.querySelector("#result");
+const insertValue = document.querySelector("#insertValue");
 
-const superEventHandler = {
-
-    handleResized: function (){
-    console.log(window.innerWidth);
-    if(window.innerWidth === 500) document.body.style.backgroundColor = "cadetblue";
-    else if (window.innerWidth >500 && window.innerWidth <=1000 ) document.body.style.backgroundColor = "darkmagenta";
-    else  document.body.style.backgroundColor = "gold";
+function handleEnterNum(event){
+    event.preventDefault();
+    console.log("!!!");
+    console.log(Entered.value);
 }
-};
-window.addEventListener("resize", superEventHandler.handleResized);
-document.getElementsByClassName("button");
+function UpdateRange(){
+    console.log(range.value);
+    const valueRange = range.value;
+}   
+
+function UpdateGuess(){
+    console.log(guess.value);
+    const valueGuess = guess.value;
+}   
+
+function LetsPlay(){
+    if(guess.value ==="" || range.value ==="") blank.classList.remove("hidden");
+    else {
+        const randomNum = Math.floor(Math.random() * (parseInt(range.value) + 1));
+        if(range.value ===0) randomNum-=1;
+
+        blank.classList.add("hidden");
+        insertValue.innerText = `You chose: ${guess.value} , the machine chose: ${randomNum}.`
+        if(randomNum === parseInt(guess.value)) {
+            result.innerText = "You won!";
+        }
+        else {
+            result.innerText = "You lost!";
+        } 
+    }
+}
+range.addEventListener("input",event=>UpdateRange(range));
+guess.addEventListener("input",event=>UpdateGuess(guess));
+play.addEventListener("click",LetsPlay);
 

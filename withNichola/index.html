@@ -4,14 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href= "style.css" />
     <title>WithNichola</title>
 </head>
 <body>
-    <div class = "hello">
-        <h1>Hello!</h1>
-        
-    </div>
+    <h1>Random Number Game </h1> 
+    
+    <h3>Generate a number between 0 and
+        <input id="range" type="number" min= 0 />
+    </h3>
+    <p>Guess the number:
+        <input id = "guess" type="number" min= 0 />
+        <input id = "play" type= "submit" value= "Play!" />
+    </p> 
+    <p id="blank" class="hidden" style="color: red;" > Enter blank </p>
+    <p id="insertValue"></p>
+    <h2 id="result"></h2>
+
     <script src="app.js"></script>
 </body>
 </html>
