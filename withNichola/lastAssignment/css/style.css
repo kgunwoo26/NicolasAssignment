@@ -2,6 +2,7 @@ body{
     /*background-image: url("../backgroundSource/1.jpg");
     background-size: cover;
     background-repeat: no-repeat;*/
+   
 }
 #time{
     margin-left: 100px;
@@ -13,13 +14,15 @@ body{
     color: #fff;
 }
 #date{
-    position: absolute;
+    margin:auto;
+    
     z-index: 2;
     font-size: x-large;
     margin-left: 650px;
     margin-top: 300px;
     font-family: HoengseongHanu ;
-    color: white;
+    color: white; 
+    position: absolute;
     
 }
 #overlay{
@@ -43,7 +46,7 @@ body{
     font-size: x-large;
     width: 500px;
     height: 100px;
-    margin-left: 20px;
+
     /*animation-name: slide;
     animation-duration: 1s;
     animation-fill-mode: forwards;
