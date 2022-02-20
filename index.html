@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href="css/style.css"/>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <header class="vid-header Container">
+        
+        <div class="fullscreen">
+            <video id="videobg" autoplay loop muted>
+            </video>
+        </div>
+        <div id="overlay"></div>
+        <div id="weather">
+            <span></span>
+            <span></span>
+        </div>
+        <div id="todo-div">
+            <h2>TODO List</h2>
+            <form id="todo-form" >
+                <input type="text" placeholder="   오늘 할 일" required /> 
+            </form>
+            <ul id="todo-List"> </ul>
+        </div>
+        <div id="date">
+            
+           
+            <h1 id="nowDate"></h1>
+            <p id="time">  </p>
+            <form  id="username">
+                <p style="display:inline">Your name </p> 
+                <input id = "name" required  maxlength="10" placeholder ="  type here" type="text"/>
+            </form>
+            <h class="hidden" id="printName"></h>
+        </div>
+    </header>
+</body>
+<script src="js/clock.js"></script>
+<script src="js/greetings.js"></script>
+<script src="js/todo.js"></script>
+<script src="js/weather.js"></script>
+<script src="js/background.js"></script>
+</html>
